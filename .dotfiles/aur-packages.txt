@@ -1,0 +1,3 @@
+1password 8.12.8-26
+brave-bin 1:1.88.138-1
+cursor-bin 3.0.13-1

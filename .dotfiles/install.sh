@@ -7,6 +7,12 @@ git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay && makepkg -si
 cd ~
 
+# locale
+echo 'LANG=en_US.UTF-8' | sudo tee /etc/locale.conf
+echo 'en_US.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen
+echo 'de_DE.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen
+sudo locale-gen
+
 # install Arch User Registry packages
 yay -S --needed - < aur-packages.txt
 

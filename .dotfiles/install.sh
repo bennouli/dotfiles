@@ -18,7 +18,12 @@ sudo locale-gen
 # install Arch User Registry packages
 yay -S --needed - < "$SCRIPT_DIR/aur-packages.txt"
 
+# install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Enable SDDM for hyprland
+sudo pacman -S sddm
+sudo systemctl enable sddm
 
 # laptop only
 if [ -d /sys/class/power_supply/BAT0 ]; then

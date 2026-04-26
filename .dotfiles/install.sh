@@ -18,6 +18,8 @@ sudo locale-gen
 # install Arch User Registry packages
 yay -S --needed - < "$SCRIPT_DIR/aur-packages.txt"
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # laptop only
 if [ -d /sys/class/power_supply/BAT0 ]; then
   sudo pacman -S --needed tlp

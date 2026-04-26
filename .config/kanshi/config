@@ -6,3 +6,7 @@ profile docked {
     output eDP-1 disable
     output HDMI-A-1 enable scale 1.5
 }
+
+profile {
+    output "Unknown-1" scale 1.5
+}

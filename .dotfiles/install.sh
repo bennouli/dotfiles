@@ -1,5 +1,7 @@
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 # install official Arch packages
-sudo pacman -S --needed - < official-packages.txt
+sudo pacman -S --needed - < "$SCRIPT_DIR/official-packages.txt"
 
 # install yay (can't use pacman for AUR)
 sudo pacman -S --needed git base-devel
@@ -14,7 +16,7 @@ echo 'de_DE.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen
 sudo locale-gen
 
 # install Arch User Registry packages
-yay -S --needed - < aur-packages.txt
+yay -S --needed - < "$SCRIPT_DIR/aur-packages.txt"
 
 # laptop only
 if [ -d /sys/class/power_supply/BAT0 ]; then

@@ -25,6 +25,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sudo pacman -S sddm
 sudo systemctl enable sddm
 
+# docker
+sudo pacman -S docker docker-compose
+sudo systemctl enable --now docker  # enable + start immediately
+
+# Only add to group if not already in it
+if ! groups $USER | grep -q docker; then
+    sudo usermod -aG docker $USER # add user to docker group so no need for sudo every time
+fi
+
 # laptop only
 if [ -d /sys/class/power_supply/BAT0 ]; then
   sudo pacman -S --needed tlp
@@ -32,3 +41,4 @@ if [ -d /sys/class/power_supply/BAT0 ]; then
   sudo sed -i 's/#START_CHARGE_THRESH_BAT0=.*/START_CHARGE_THRESH_BAT0=75/' /etc/tlp.conf
   sudo sed -i 's/#STOP_CHARGE_THRESH_BAT0=.*/STOP_CHARGE_THRESH_BAT0=80/' /etc/tlp.conf
 fi
+

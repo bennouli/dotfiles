@@ -8,5 +8,5 @@ profile docked {
 }
 
 profile {
-    output DP-4 enable scale 1.5
+    output DP-4 enable scale 1.33
 }

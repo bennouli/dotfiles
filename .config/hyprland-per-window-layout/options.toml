@@ -1,0 +1,17 @@
+# list of keyboards to operate on
+# use `hyprctl devices -j` to list all keyboards
+keyboards = [
+  "keychron-keychron-k6-pro",
+]
+
+# layout_index => window classes list
+# use `hyprctl clients` to get class names
+[[default_layouts]]
+0 = [
+    "com.mitchellh.ghostty",
+]
+1 = [
+    "org.telegram.desktop",
+    "signal"
+]
+

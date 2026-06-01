@@ -30,6 +30,9 @@
         "tray",
         "custom/power"
     ],
+    "hyprland/workspaces":{
+"move-to-monitor": true
+    },
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,

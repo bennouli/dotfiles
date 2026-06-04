@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias odysseus='python -m uvicorn app:app --host 127.0.0.1 --port 7000'
+
 export PATH="$HOME/.local/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
@@ -110,6 +112,7 @@ export PATH="$PATH:/home/benno/.lmstudio/bin"
 # End of LM Studio CLI section
 
 export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 source ~/completion-for-pnpm.bash

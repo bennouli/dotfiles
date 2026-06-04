@@ -275,6 +275,8 @@ hl.device({
 
 -- See https://wiki.hypr.land/Configuring/Keywords/
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+hl.bind("SHIFT + CTRL + 4", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind("SUPER + SHIFT + CTRL + 4", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
@@ -295,6 +297,18 @@ hl.bind(mainMod .. " + right", hl.dsp.window.move({ direction = "right", group_a
 hl.bind(mainMod .. " + left", hl.dsp.window.move({ direction = "left", group_aware = true }))
 hl.bind(mainMod .. " + up", hl.dsp.window.move({ direction = "up", group_aware = true }))
 hl.bind(mainMod .. " + down", hl.dsp.window.move({ direction = "down", group_aware = true }))
+hl.bind("CTRL + return", hl.dsp.window.fullscreen_state({ internal = 1, client = 0, action = "toggle" }))
+-- hl.bind("CTRL + return", function()
+--   hl.monitor()
+-- 	hl.dsp.window.move({ x = 0, y = 0 })
+-- 	hl.dsp.window.resize({ x = "monitor_w", y = "monitor_h" })
+-- 	hl.window_rule({
+-- 		-- match = { class = "my-window" },
+-- 		float = true,
+-- 		size = { "monitor_w", "monitor_h" },
+-- 		move = { 0, 0 },
+-- 	})
+-- end)
 
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do

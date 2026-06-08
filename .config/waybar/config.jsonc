@@ -28,7 +28,8 @@
         "battery#bat2",
         "clock",
         "tray",
-        "custom/power"
+        "custom/power",
+	"custom/darkmode"
     ],
     "hyprland/workspaces":{
 "move-to-monitor": true
@@ -232,5 +233,12 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    }, 
+    "custom/darkmode": {
+	"format": "{}",
+	"exec": "gsettings get org.gnome.desktop.interface color-scheme | grep -q 'prefer-dark' && echo '☀️' || echo '🌙'",
+	"interval": 2,
+	"on-click": "~/.local/bin/toggle-gtk-theme.sh",
+	"tooltip": false
     }
 }

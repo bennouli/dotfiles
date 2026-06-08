@@ -10,5 +10,6 @@ hyprland-per-window-layout
 hyprland-per-window-layout-debug
 lmstudio-bin
 watchman-bin
+whitesur-gtk-theme
 yay
 yay-debug

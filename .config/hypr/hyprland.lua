@@ -379,7 +379,7 @@ hl.window_rule({
 	float = true,
 })
 
-hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'YOUR_DARK_GTK3_THEME'") -- for GTK3 apps
+hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'WhiteSur-Dark'") -- for GTK3 apps
 hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' ") -- for GTK4 apps
 
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct") -- for Qt apps

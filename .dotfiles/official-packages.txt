@@ -36,6 +36,7 @@ bash
 binutils
 bison
 blas
+blueman
 bluez
 bluez-libs
 bluez-utils
@@ -133,6 +134,7 @@ ghostty-shell-integration
 ghostty-terminfo
 giflib
 git
+github-cli
 glib-networking
 glib-perl
 glib2
@@ -634,6 +636,7 @@ lxappearance
 lz4
 lzo
 m4
+mailcap
 make
 man-db
 md4c
@@ -797,7 +800,9 @@ procps-ng
 psmisc
 pugixml
 python
+python-cairo
 python-dbus
+python-gobject
 python-libevdev
 python-pyqt5
 python-pyqt5-sip

@@ -42,6 +42,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("1password --silent")
+	hl.exec_cmd("rofi-bluetooth")
 	hl.exec_cmd("easyeffects --gapplication-service")
 end)
 

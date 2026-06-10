@@ -166,6 +166,15 @@ hl.animation({ leaf = "workspacesIn", enabled = true, speed = 3, bezier = "easeI
 hl.animation({ leaf = "workspacesOut", enabled = true, speed = 3, bezier = "easeInOutCubic", style = "slide" })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
 
+-- Float and pin tray-style apps (pavucontrol, 1Password, blueman, easyeffects) as widgets
+hl.window_rule({
+	name = "open-as-widget",
+	match = {
+		class = "org.pulseaudio.pavucontrol|1password|blueman-manager|org.kde.easyeffects",
+	},
+	float = true,
+	pin = true,
+})
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.

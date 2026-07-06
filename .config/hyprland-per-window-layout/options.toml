@@ -12,6 +12,7 @@ keyboards = [
 ]
 1 = [
     "org.telegram.desktop",
-    "signal"
+    "signal",
+    "obsidian"
 ]
 

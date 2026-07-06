@@ -4,11 +4,16 @@ android-emulator-debug
 android-sdk
 android-sdk-debug
 android-studio
+beeper-v4-bin
 brave-bin
 cursor-bin
 hyprland-per-window-layout
 hyprland-per-window-layout-debug
+hyprwhspr
 lmstudio-bin
+python-pulsectl
+python-sounddevice
+rofi-bluetooth-git
 watchman-bin
 whitesur-gtk-theme
 yay

@@ -169,10 +169,18 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 hl.window_rule({
 	name = "open-as-widget",
 	match = {
-		class = "org.pulseaudio.pavucontrol|1password|blueman-manager|org.kde.easyeffects",
+		class = "org.pulseaudio.pavucontrol|1password|blueman-manager|org.kde.easyeffects|Emulator",
 	},
 	float = true,
 	pin = true,
+})
+hl.window_rule({
+	name = "open-as-widget",
+	match = {
+		class = "Emulator|org.gnome.Nautilus",
+	},
+	float = true,
+	pin = false,
 })
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
@@ -238,7 +246,10 @@ hl.config({
 		kb_options = "caps:ctrl_modifier, altwin:swap_alt_win",
 		kb_rules = "",
 
-		follow_mouse = 2,
+		repeat_rate = 50,
+		repeat_delay = 300,
+
+		follow_mouse = 4,
 
 		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.,
 

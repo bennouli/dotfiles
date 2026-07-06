@@ -1,3 +1,5 @@
+@import "/usr/lib/hyprwhspr/config/waybar/hyprwhspr-style.css";
+
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   /*font-family: "DepartureMono Nerd Font Mono", serif;*/
@@ -8,7 +10,7 @@
 }
 
 window#waybar {
-  background-color: transparent; /*rgba(43, 48, 59, 0.5);*/
+  background-color: rgba(43, 48, 59, 0.9); /*rgba(43, 48, 59, 0.5);*/
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;

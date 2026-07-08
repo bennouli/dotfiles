@@ -12,7 +12,7 @@ if [ "$current" = "$DARK" ]; then
 else
     gsettings set org.gnome.desktop.interface gtk-theme "$DARK"
     gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-    sed -i 's/^theme = .*/theme = Rose Pine Moon/' ~/.config/ghostty/config.ghostty
+    sed -i 's/^theme = .*/theme = TokyoNight/' ~/.config/ghostty/config.ghostty
 fi
 
 pkill -USR2 ghostty
